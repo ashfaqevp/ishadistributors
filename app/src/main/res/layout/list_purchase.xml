@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:orientation="horizontal"
+        android:padding="6dp">
+
+        <TextView
+            android:id="@+id/purchasedItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/nexa_bold"
+            android:text="Item"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/purchasedQnty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:fontFamily="@font/nexa_bold"
+            android:text="Qnty"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/purchasedPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:fontFamily="@font/nexa_bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

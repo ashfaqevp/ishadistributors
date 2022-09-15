@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_purple_light"
+    tools:context=".stock">
+
+    <LinearLayout
+        android:id="@+id/actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="#370774"
+        android:backgroundTint="#370774"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#370774"
+            android:foregroundGravity="left"
+            android:padding="16dp"
+            android:scaleType="fitCenter"
+            android:tint="#FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/backbutton" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:fontFamily="@font/nexa_bold"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:padding="17dp"
+            android:text="STOCK REPORT"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_bottom_round_purple"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/actionBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/addStock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:padding="10dp"
+                    app:backgroundTint="#09d157"
+                    app:srcCompat="@android:drawable/ic_input_add" />
+
+                <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nexa_bold"
+                    android:gravity="center"
+                    android:text="Add Stock"
+                    android:textColor="#D3FFFFFF" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/floatingActionButton3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:tint="#ff4247"
+                    app:backgroundTint="#FFFFFF"
+                    app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/nexa_bold"
+                    android:gravity="center"
+                    android:text="Add Damage"
+                    android:textColor="#D3FFFFFF" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/floatingActionButton4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:tint="@color/common_google_signin_btn_text_dark_default"
+                    app:backgroundTint="#ff4247"
+                    app:srcCompat="@android:drawable/ic_menu_delete" />
+
+                <TextView
+                    android:id="@+id/textView28"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/nexa_bold"
+                    android:gravity="center"
+                    android:text="Delete Stock"
+                    android:textColor="#D3FFFFFF" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <HorizontalScrollView
+
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="25dp"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/head">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/layoutlonground"
+                android:backgroundTint="#ffffff"
+                android:padding="10dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="3dp"
+                app:cardMaxElevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_weight="3"
+                            android:fontFamily="@font/nexa_bold"
+                            android:gravity="center|start"
+                            android:text="Current Stock"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <ImageButton
+                            android:id="@+id/history"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="center|end"
+
+                            android:background="@android:color/white"
+                            android:foregroundGravity="right"
+                            android:padding="10dp"
+                            android:scaleType="fitCenter"
+                            android:tint="@color/colorPrimaryDark"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:srcCompat="@android:drawable/ic_menu_recent_history" />
+
+
+                        <ImageButton
+                            android:id="@+id/edit"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="center|end"
+
+                            android:background="@android:color/white"
+                            android:foregroundGravity="right"
+                            android:padding="13.5dp"
+                            android:scaleType="fitCenter"
+                            android:tint="@color/colorPrimaryDark"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:srcCompat="@android:drawable/ic_menu_edit" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+
+                        <TextView
+                            android:id="@+id/stockItem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/nexa_bold"
+                            android:text="Product"
+                            android:textSize="14sp"
+                            android:typeface="normal" />
+
+                        <TextView
+                            android:id="@+id/stockQnty"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:fontFamily="@font/nexa_bold"
+                            android:text="Stock"
+                            android:textSize="14sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_marginTop="5dp">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/currentStockList"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/corner10_radius"
+                android:padding="10dp"
+                app:cardCornerRadius="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textViewd8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_weight="3"
+                            android:fontFamily="@font/nexa_bold"
+                            android:gravity="center|start"
+                            android:text="New Stock"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+
+                        <TextView
+                            android:id="@+id/stasockItem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/nexa_bold"
+                            android:text="Product"
+                            android:textSize="14sp"
+                            android:typeface="normal" />
+
+                        <TextView
+                            android:id="@+id/stockQnzaxty"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:fontFamily="@font/nexa_bold"
+                            android:text="Stock"
+                            android:textSize="14sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_marginTop="5dp">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/newStockList"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

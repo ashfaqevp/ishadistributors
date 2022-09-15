@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".delete_product">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_launcher_background"
+        android:backgroundTint="@color/colorPrimary"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/head"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2.5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <AutoCompleteTextView
+                android:id="@+id/searchProduct"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:layout_weight=".5"
+                android:background="@drawable/layout1"
+                android:backgroundTint="@color/common_google_signin_btn_text_dark_default"
+                android:drawableStart="@drawable/searchicon">
+
+
+            </AutoCompleteTextView>
+
+            <EditText
+                android:id="@+id/PQ"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/layout1"
+                android:backgroundTint="@color/common_google_signin_btn_text_dark_default"
+                android:hint="Qnty"
+                android:inputType="number" />
+
+            <ImageButton
+                android:id="@+id/ANP"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/layout_3"
+                android:backgroundTint="@color/colorAccent"
+                android:src="@android:drawable/ic_input_add"
+                android:text="ADD"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:tint="@color/common_google_signin_btn_text_dark_default" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:text="Deleting the Product Also Causes Pending"
+        app:layout_constraintBottom_toTopOf="@+id/test1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/test1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="7dp"
+        android:divider="@null"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView20">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:weightSum="11">
+
+            <TextView
+                android:id="@+id/NPI"
+                android:layout_width="5dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/NPName"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="4"
+                android:gravity="center|start"
+                android:hint="product"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/NPRate"
+                android:layout_width="10dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="2"
+                android:gravity="center|start"
+                android:hint="Price"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/addedProductsQnty"
+                android:layout_width="20dp"
+                android:layout_height="42dp"
+                android:layout_marginEnd="15dp"
+                android:layout_weight="1.5"
+                android:background="@drawable/layout1"
+                android:hint="Qnty"
+                android:inputType="number"
+                android:textSize="14.5sp" />
+
+            <TextView
+                android:id="@+id/NPTotal"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="3.5"
+                android:background="@drawable/layout2"
+                android:hint="Total"
+                android:textColor="#b82137"
+                android:textColorHint="#BB1515"
+                android:textSize="15dp" />
+
+            <ImageButton
+                android:id="@+id/removeBtn"
+                android:layout_width="5dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:backgroundTint="#FFFFFF"
+                android:visibility="gone"
+                app:srcCompat="@android:drawable/ic_menu_delete" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/layout_3"
+        android:backgroundTint="#F2A81616"
+        android:text="DELETE"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,885 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/light_gray_gradient"
+    tools:context=".shop">
+
+
+    <LinearLayout
+        android:id="@+id/actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/Nav"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_weight=".65"
+            android:backgroundTint="@color/colorPrimary"
+            android:foregroundGravity="left"
+            android:padding="16dp"
+            android:scaleType="fitCenter"
+            android:tint="#FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/backbutton" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="2.7"
+            android:fontFamily="@font/nexa_bold"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:padding="17dp"
+            android:text="Shop Name"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/info"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center|end"
+            android:layout_weight=".65"
+            android:backgroundTint="@color/colorPrimary"
+            android:foregroundGravity="right"
+            android:padding="16dp"
+            android:scaleType="fitCenter"
+            android:tint="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@android:drawable/ic_dialog_info" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/bottom_round_main_bg"
+        android:paddingBottom="10dp"
+        android:weightSum="3"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/actionBar">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="2"
+            android:background="@drawable/corner10_radius"
+            android:backgroundTint="#F8FFFFFF"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Pending" />
+
+            <TextView
+                android:id="@+id/shopHeadPending"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/nexa_bold"
+                android:gravity="center"
+                android:text=" 0.00"
+                android:textColor="#b82137"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/corner10_radius"
+            android:backgroundTint="#F8FFFFFF"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:weightSum="4">
+
+            <ImageButton
+                android:id="@+id/showHistoryBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/common_google_signin_btn_text_dark_default"
+                android:padding="3dp"
+                android:scaleType="fitCenter"
+                android:tint="#38897a"
+                app:srcCompat="@android:drawable/arrow_up_float" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nexa_bold"
+                    android:gravity="center|end"
+                    android:shadowColor="@color/colorPrimaryDark"
+                    android:text="0"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nexa_bold"
+                    android:gravity="center|start"
+                    android:text="  Trays" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/subTray"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:backgroundTint="@android:color/white"
+                android:padding="3dp"
+                android:scaleType="fitCenter"
+                android:tint="@color/design_default_color_error"
+                app:srcCompat="@android:drawable/arrow_down_float" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/gradient_paid"
+        android:gravity="center|start|end"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <EditText
+            android:id="@+id/editPaid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/gradient_paid"
+            android:backgroundTint="@color/common_google_signin_btn_text_dark_default"
+            android:ems="10"
+            android:hint="Pay"
+            android:inputType="numberDecimal"
+            android:padding="10dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addPaidBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left|end"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="2dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:foregroundGravity="left|center"
+            app:backgroundTint="@color/common_google_signin_btn_text_dark_default"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@android:drawable/ic_input_add"
+            app:tint="@color/colorPrimaryDark" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@id/linearLayout10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout6">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/layoutlonground"
+                        android:backgroundTint="#ffffff"
+                        android:padding="10dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="3dp"
+                        app:cardMaxElevation="3dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/textView8"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:layout_weight="3"
+                                    android:fontFamily="@font/nexa_bold"
+                                    android:gravity="center|start"
+                                    android:text="Today"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold" />
+
+                                <ImageButton
+                                    android:id="@+id/history"
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    android:layout_gravity="center|end"
+
+                                    android:background="@android:color/white"
+                                    android:foregroundGravity="right"
+                                    android:padding="10dp"
+                                    android:scaleType="fitCenter"
+                                    android:tint="@color/colorPrimaryDark"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:srcCompat="@android:drawable/ic_menu_recent_history" />
+
+
+                                <ImageButton
+                                    android:id="@+id/edit"
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    android:layout_gravity="center|end"
+
+                                    android:background="@android:color/white"
+                                    android:foregroundGravity="right"
+                                    android:padding="13.5dp"
+                                    android:scaleType="fitCenter"
+                                    android:tint="@color/colorPrimaryDark"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:srcCompat="@android:drawable/ic_menu_edit" />
+
+                                <ImageButton
+                                    android:id="@+id/share"
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    android:layout_gravity="center|end"
+
+                                    android:background="@android:color/white"
+                                    android:foregroundGravity="right"
+                                    android:padding="12.5dp"
+                                    android:scaleType="fitCenter"
+                                    android:tint="@color/colorPrimaryDark"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:srcCompat="@android:drawable/ic_menu_share" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/mar"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:fontFamily="@font/nexa_bold"
+                                    android:text="Last Pending :"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <TextView
+                                    android:id="@+id/LDlpend"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.3"
+                                    android:fontFamily="@font/nexa_bold"
+                                    android:text="0.00"
+                                    android:textColor="@color/colorPrimaryDark" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="3"
+                                android:orientation="horizontal">
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:fontFamily="@font/nexa_bold"
+                                    android:text="Purchase :"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rPurchaseT"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.3" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:fontFamily="@font/nexa_bold"
+                                    android:text="Price :"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <TextView
+                                    android:id="@+id/LDprice"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.3"
+                                    android:fontFamily="@font/nexa_bold"
+                                    android:text="0.00"
+                                    android:textColor="@color/colorPrimaryDark" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/textView9"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:fontFamily="@font/nexa_bold"
+                                    android:text="Total :"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <TextView
+                                    android:id="@+id/LDt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.3"
+                                    android:fontFamily="@font/nexa_bold"
+                                    android:text="0.00"
+                                    android:textColor="@color/colorPrimaryDark" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:fontFamily="@font/nexa_bold"
+                                    android:text="Paid :"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <TextView
+                                    android:id="@+id/LDpaid"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.3"
+                                    android:fontFamily="@font/nexa_bold"
+                                    android:text="0.00"
+                                    android:textColor="#08504F" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:fontFamily="@font/nexa_bold"
+                                    android:text="Balance :"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <TextView
+                                    android:id="@+id/LDpending"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.3"
+                                    android:fontFamily="@font/nexa_bold"
+                                    android:text="0.00"
+                                    android:textColor="@color/design_default_color_error" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/corner10_radius"
+                        android:padding="10dp"
+                        app:cardCornerRadius="15dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardCornerRadius="5dp"
+                                app:cardElevation="0dp">
+
+                                <TextView
+                                    android:id="@+id/YtextView8"
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:fontFamily="@font/nexa_bold"
+                                    android:gravity="center"
+                                    android:text="Yesterday"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:id="@+id/Ymar"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:fontFamily="@font/nexa_bold"
+                                    android:text="Last Pending :"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <TextView
+                                    android:id="@+id/YLDlpend"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.3"
+                                    android:fontFamily="@font/nexa_bold"
+                                    android:text="0.00"
+                                    android:textColor="@color/colorPrimaryDark" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:fontFamily="@font/nexa_bold"
+                                    android:text="Purchase :"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/YrPurchaseT"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/nexa_bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:fontFamily="@font/nexa_bold"
+                                    android:text="Price :"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <TextView
+                                    android:id="@+id/YLDprice"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/nexa_bold"
+                                    android:text="0.00"
+                                    android:textColor="@color/colorPrimaryDark" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/YtextView9"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:fontFamily="@font/nexa_bold"
+                                    android:text="Total :"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <TextView
+                                    android:id="@+id/YLDt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/nexa_bold"
+                                    android:text="0.00"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:fontFamily="@font/nexa_bold"
+                                    android:text="Paid :"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <TextView
+                                    android:id="@+id/YLDpaid"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/nexa_bold"
+                                    android:text="0.00"
+                                    android:textColor="#08504F" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:fontFamily="@font/nexa_bold"
+                                    android:text="Balance"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <TextView
+                                    android:id="@+id/YLDpending"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/nexa_bold"
+                                    android:text="0.00"
+                                    android:textColor="@color/design_default_color_error" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="100dp"
+                        android:background="@drawable/layoutlonground"
+                        android:backgroundTint="#ffffff"
+                        android:padding="10dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="3dp"
+                        app:cardMaxElevation="3dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/ordersdkj"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:layout_weight="3"
+                                    android:fontFamily="@font/nexa_bold"
+                                    android:gravity="center|start"
+                                    android:text="Orders"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold" />
+
+
+                                <ImageButton
+                                    android:id="@+id/orderhistoryBtn"
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    android:layout_gravity="center|end"
+
+                                    android:background="@android:color/white"
+                                    android:foregroundGravity="right"
+                                    android:padding="10dp"
+                                    android:scaleType="fitCenter"
+                                    android:tint="@color/colorPrimaryDark"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:srcCompat="@android:drawable/ic_menu_recent_history" />
+                            </LinearLayout>
+
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/todayOrder"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed" />
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="100dp"
+                        android:background="@drawable/layoutlonground"
+                        android:backgroundTint="#ffffff"
+                        android:padding="10dp"
+                        app:cardBackgroundColor="@color/common_google_signin_btn_text_dark_pressed"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="3dp"
+                        app:cardMaxElevation="3dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+
+                                <TextView
+                                    android:id="@+id/textView99ak"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:layout_weight="3"
+                                    android:fontFamily="@font/nexa_bold"
+                                    android:gravity="center|start"
+                                    android:text="New Orders"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold" />
+
+                                <ImageButton
+                                    android:id="@+id/btnDeleteOrder"
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    android:layout_gravity="center|end"
+
+                                    android:background="@android:color/white"
+                                    android:foregroundGravity="right"
+                                    android:padding="13.5dp"
+                                    android:scaleType="fitCenter"
+                                    android:tint="@color/colorPrimaryDark"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:srcCompat="@android:drawable/ic_menu_edit" />
+                            </LinearLayout>
+
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/yesterdayOrder"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed" />
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+
+            </HorizontalScrollView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout10"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="6dp"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/orderButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/gradient_order_btn"
+            android:clickable="true"
+            android:fontFamily="@font/nexa_bold"
+            android:text="ORDER"
+            android:textColor="@color/common_google_signin_btn_text_dark_pressed" />
+
+        <Button
+            android:id="@+id/billBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/gradient_bill_btn"
+            android:clickable="true"
+            android:fontFamily="@font/nexa_bold"
+            android:text="BILL"
+            android:textColor="@color/common_google_signin_btn_text_dark_pressed" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

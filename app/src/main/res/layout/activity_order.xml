@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2D4B92FC"
+    tools:context=".newOrder">
+
+
+    <LinearLayout
+        android:id="@+id/actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="#f56899"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/Nav"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#f56899"
+            android:foregroundGravity="left"
+            android:padding="16dp"
+            android:scaleType="fitCenter"
+            android:tint="#FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/backbutton" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:fontFamily="@font/nexa_bold"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:padding="17dp"
+            android:text="All Orders"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/head2"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@drawable/orange_gradient_background"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actionBar"/>
+
+    <HorizontalScrollView
+
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="25dp"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/head2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="330dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/layoutlonground"
+                android:backgroundTint="#ffffff"
+                android:padding="10dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="3dp"
+                app:cardMaxElevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_weight="3"
+                            android:fontFamily="@font/nexa_bold"
+                            android:gravity="center|start"
+                            android:text="Today"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <ImageButton
+                            android:id="@+id/historyBtnOrder"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="center|end"
+
+                            android:background="@android:color/white"
+                            android:foregroundGravity="right"
+                            android:padding="10dp"
+                            android:scaleType="fitCenter"
+                            android:tint="@color/colorPrimaryDark"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:srcCompat="@android:drawable/ic_menu_recent_history" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+
+                        <TextView
+                            android:id="@+id/stockItem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.2"
+                            android:fontFamily="@font/nexa_bold"
+                            android:text="Product"
+                            android:textSize="14sp"
+                            android:typeface="normal" />
+
+                        <TextView
+                            android:id="@+id/stockQnty"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:fontFamily="@font/nexa_bold"
+                            android:text="Qnty"
+                            android:textSize="14sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_marginTop="5dp">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/todayOrderList"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="330dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/corner10_radius"
+                android:padding="10dp"
+                app:cardCornerRadius="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textViewd8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_weight="3"
+                            android:fontFamily="@font/nexa_bold"
+                            android:gravity="center|start"
+                            android:text="YesterDay"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+
+                        <TextView
+                            android:id="@+id/stasockItem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.2"
+                            android:fontFamily="@font/nexa_bold"
+                            android:text="Product"
+                            android:textSize="14sp"
+                            android:typeface="normal" />
+
+                        <TextView
+                            android:id="@+id/stockQnzaxty"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:fontFamily="@font/nexa_bold"
+                            android:text="Qnty"
+                            android:textSize="14sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_marginTop="5dp">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/yesterdayOrderList"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

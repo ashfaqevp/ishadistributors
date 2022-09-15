@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:padding="10dp"
+        app:cardBackgroundColor="#fafafa"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="3dp"
+        app:cardMaxElevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="50dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:fontFamily="@font/nexa_bold"
+                    android:text="Shop Name"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/editName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/corner10_radius"
+                    android:backgroundTint="#42AAAAAA"
+                    android:ems="10"
+                    android:fontFamily="@font/nexa_bold"
+                    android:inputType="textPersonName"
+                    android:padding="10dp"
+                    android:text="Shop"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/textVmbiew6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:fontFamily="@font/nexa_bold"
+                    android:text="Shop Place"
+                    android:textSize="14sp"
+
+                    />
+
+                <EditText
+                    android:id="@+id/editPlace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/corner10_radius"
+                    android:backgroundTint="#42AAAAAA"
+                    android:ems="10"
+                    android:fontFamily="@font/nexa_bold"
+                    android:inputType="textPersonName"
+                    android:padding="10dp"
+                    android:text="Place"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewgfd6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:fontFamily="@font/nexa_bold"
+                    android:text="Phone No"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView29"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/corner10_radius"
+                        android:backgroundTint="#42AAAAAA"
+                        android:fontFamily="@font/nexa_bold"
+                        android:padding="10dp"
+                        android:text="+91"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/corner10_radius"
+                        android:backgroundTint="#42AAAAAA"
+                        android:ems="10"
+                        android:fontFamily="@font/nexa_bold"
+                        android:inputType="phone"
+                        android:padding="10dp"
+                        android:text="0000000000"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"
+            android:orientation="horizontal"
+
+            >
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/phonBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="8dp"
+                android:clickable="true"
+                app:backgroundTint="#04C65C"
+                app:fabSize="mini"
+                app:srcCompat="@android:drawable/ic_menu_call" />
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/editSaveBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="8dp"
+                android:clickable="true"
+                app:fabSize="mini"
+                app:srcCompat="@android:drawable/ic_menu_edit" />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addNewProduct">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/productName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/layoutlonground"
+            android:ems="10"
+            android:hint="PRODUCT"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/productPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/layoutlonground"
+            android:ems="10"
+            android:hint="PRICE"
+            android:inputType="number|numberDecimal" />
+
+        <EditText
+            android:id="@+id/productWholesale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/layoutlonground"
+            android:ems="10"
+            android:hint="WHOLESALE"
+            android:inputType="number|numberDecimal" />
+
+        <Button
+            android:id="@+id/submitNewProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/layout_3"
+            android:backgroundTint="@color/colorAccent"
+            android:ems="10"
+            android:fontFamily="@font/nexa"
+            android:text="ADD PRODUCT"
+            android:textColor="@color/common_google_signin_btn_text_dark_default" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
