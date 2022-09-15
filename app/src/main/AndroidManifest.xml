@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.a_apps.ishaproducts">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-sdk android:targetSdkVersion="21" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/main_icon"
+        android:label="Isha Products"
+        android:roundIcon="@mipmap/main_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Order"></activity>
+        <activity android:name=".newOrder" />
+        <activity android:name=".shopEdit" />
+        <activity android:name=".reportHistory" />
+        <activity android:name=".addNewStock" />
+        <activity android:name=".addNewProduct" />
+        <activity android:name=".productEdit" />
+        <activity android:name=".shopDeletePaid" />
+        <activity android:name=".shopDeleteProduct" />
+        <activity android:name=".bill" />
+        <activity android:name=".shopHistory" />
+        <activity android:name=".product" />
+        <activity android:name=".stock" />
+        <activity android:name=".cash" />
+        <activity android:name=".account" />
+        <activity android:name=".reportMenu" />
+        <activity android:name=".shop" />
+        <activity android:name=".addNewShop" />
+        <activity android:name=".home" />
+        <activity android:name=".house" />
+        <activity android:name=".login" />
+        <activity android:name=".splashScreen">
+
+
+
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".Main2Activity" />
+        <activity android:name=".MainActivity" >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </activity>
+    </application>
+
+</manifest>
